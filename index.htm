@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Generater</title>
+    <link rel="stylesheet" href="css/index.css">
+    <div id="links"></div>
+</head>
+
+<body>
+    <nav>
+        <div class="name">UI Design</div>
+    </nav>
+
+    <div class="row">
+        <div class="col">
+            <div class="bar">
+                <div class="bar-title">Components</div>
+                <div class="bar-item">
+                    <div id="edit" class="items"><i class="fas fa-code"></i></div>
+                </div>
+            </div>
+
+            <div class="bg-box">
+                <div class="input-group">
+                    <h3>Create tag</h3>
+                    <div class="content">
+                        <input id="tag" type="text" class="border-none padding-s round-xxs soft-shadow-in"
+                            placeholder="Tagname">
+                        <input id="createTag" value="Create" type="button"
+                            class="border-none padding-s round-xxs soft-shadow-out">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <h3>Buttons</h3>
+                    <div class="content">
+                        <input id="b1" type="button" class="border-none padding soft-shadow-out" value="hello" draggable="true" ondragstart="drag(event)">
+                    </div>
+                </div>
+
+                <section class="input-group">
+                    <h3>NavBars</h3>
+                    <div class="content">
+                        <div id="n1" type="button" value="hello" draggable="true" ondragstart="drag(event)" class="bar">
+                            <div class="bar-title">AppName</div>
+                            <div class="bar-item">
+                                <div class="items">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="items">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="items bar-toggle">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="input-group">
+                    <h3>Shadows</h3>
+                    <div class="content">
+                        <div class="padding soft-shadow-out" onclick="add_class('soft-shadow-out')">soft-shadow-out
+                        </div>
+                        <div class="padding soft-shadow-in" onclick="add_class('soft-shadow-in')">soft-shadow-in</div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <h3>Padding</h3>
+                    <div class="content">
+                        <div class="padding soft-shadow-out" onclick="add_class('padding-xs')">Padding-xs</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('padding-s')">Padding-s</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('padding')">Padding</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('padding-l')">Padding-l</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('padding-xl')">Padding-xl</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('padding-xxl')">Padding-xxl</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('padding-xxxl')">Padding-xxxl</div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <h3>Margin</h3>
+                    <div class="content">
+                        <div class="padding soft-shadow-out" onclick="add_class('margin-xs')">Margin-xs</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('margin-s')">Margin-s</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('margin')">Margin</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('margin-l')">Margin-l</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('margin-xl')">Margin-xl</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('margin-xxl')">Margin-xxl</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('margin-xxxl')">Margin-xxxl</div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <h3>Border-radius</h3>
+                    <div class="content">
+                        <div class="padding soft-shadow-out" onclick="add_class('round-xxs')">round-xxs</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('round-xs')">round-xs</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('round-s')">round-s</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('round')">round</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('round-l')">round-l</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('round-xl')">round-xl</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('round-xxl')">round-xxl</div>
+                        <div class="padding soft-shadow-out" onclick="add_class('round-xxxl')">round-xxxl</div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <h3>Border</h3>
+                    <div class="content">
+                        <div class="padding soft-shadow-out" onclick="add_class('border-none')">Border-none</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="bar">
+                <div class="bar-title">Result</div>
+                <div class="bar-item">
+                    <div id="edit" class="items"><i class="fas fa-edit"></i></div>
+                    <div id="delete" class="items"><i class="fas fa-trash-alt"></i></div>
+                    <div id="deselect" class="items"><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+
+            <div class="bg-box">
+                <iframe id="output" class="output" src=""></iframe>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="bar">
+                <div class="bar-title">Custom</div>
+                <div class="bar-item">
+                    <div id="edit" class="items"><i class="fas fa-tools"></i></div>
+                </div>
+            </div>
+            <div class="bg-box">
+                <div class="input-group">
+                    <h3>Atttibute</h3>
+                    <div class="content">
+                        <input id="attr" type="text" class="border-none padding-s round-xxs soft-shadow-in"
+                            placeholder="Attrib name">
+                        <input id="attr-value" type="text" class="border-none padding-s round-xxs soft-shadow-in"
+                            placeholder="value">
+                        <input id="apply-attr" value="Apply" type="button"
+                            class="border-none padding-s round-xxs soft-shadow-out">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast">Copied!!</div>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $('#links').load("links.htm");
+        $($("#output")[0].contentDocument.head).load('links.htm');
+    </script>
+</body>
+
+</html>

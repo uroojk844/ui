@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bar {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bar-item {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 8px;
+}
+
+.items {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, .9),
+    5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.items:active i {
+    opacity: 0.5;
+}
+
+.bar-toggle{
+    display: none;
+}
+
+.bar-title {
+    font-size: 24px;
+    font-weight: 600;
+    place-self: start;
+}
+
+.items:hover {
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, .9),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.soft-shadow-out {
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, .9),
+        5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.soft-shadow-out:hover {
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, .9),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.soft-shadow-in {
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, .9),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.soft-shadow-in:hover {
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, .9),
+        5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.padding-xs{
+    padding: 4px;
+}
+
+.padding-s{
+    padding: 8px;
+}
+
+.padding{
+    padding: 16px;
+}
+
+.padding-l {
+    padding: 24px;
+}
+
+.padding-xl {
+    padding: 32px;
+}
+
+.padding-xxl {
+    padding: 48px;
+}
+
+.padding-xxxl {
+    padding: 64px;
+}
+
+.margin-xs {
+    margin: 4px;
+}
+
+.margin-s {
+    margin: 8px;
+}
+
+.margin {
+    margin: 16px;
+}
+
+.margin-l {
+    margin: 24px;
+}
+
+.margin-xl {
+    margin: 32px;
+}
+
+.margin-xxl {
+    margin: 48px;
+}
+
+.margin-xxxl {
+    margin: 64px;
+}
+
+.round-xxs {
+    border-radius: 4px;
+}
+
+.round-xs {
+    border-radius: 8px;
+}
+
+.round-s {
+    border-radius: 12px;
+}
+
+.round {
+    border-radius: 16px;
+}
+
+.round-l {
+    border-radius: 24px;
+}
+
+.round-xl {
+    border-radius: 32px;
+}
+
+.round-xxl {
+    border-radius: 48px;
+}
+
+.round-xxxl {
+    border-radius: 64px;
+}
+
+.border-none{
+    border: 0;
+}
+
+.csi{
+    border: 1px dotted red;
+}
+
+@media screen and (max-width:600px) {
+    .bar-toggle {
+        display: grid;
+    }
+}
